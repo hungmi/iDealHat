@@ -1,3 +1,66 @@
-// Place all the styles related to the questions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+textarea {
+  font-size: 18px;
+}
+
+#questions {
+  width: calc(50% - 60px);
+  height: calc(80% - 60px);
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+#transformed_questions, #transformed_questions_bg {
+  width: calc(50% - 60px);
+  height: calc(100% - 60px);
+  position: absolute;
+  left: calc(50% + 30px);
+  top: 30px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#transformed_questions_bg {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/ca/8a/59/ca8a5934413cb6c94368422f13a3ea2d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#transformed_questions {
+  overflow-y: scroll;
+  .question_wrapper {
+    width: 350px;
+    margin: 30px auto;
+    text-align: center;
+    .question_content, .question_option {
+      background-color: rgba(248,248,248,0.78);
+      border-radius: 8px;
+    }
+    .question_content, .question_options_wrapper {
+      margin: auto;
+    }
+    .question_content {
+      padding: 15px;
+      width: 100%;
+      height: 120px;
+      font-family: "微軟正黑體",'Open Sans',PingFangTC-Medium,sans-serif,Arial,Helvetica,sans-serif !important;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .question_option {
+      word-break: break-word;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px 16px;
+      &:hover {
+        background-color: rgba(248,248,248,1);
+      }
+    }
+  }
+}
