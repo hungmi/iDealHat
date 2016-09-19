@@ -1,4 +1,12 @@
 <%= text_area_tag :questions %>
-<div id="transformed_questions_bg"></div>
-<div id="transformed_questions"></div>
-<%#= text_area_tag :tranformed_questions %>
+<div id="iphone">
+  <div id="transformed_questions"></div>
+</div>
+
+<style type="text/css">
+  #iphone {
+    background-image: url("<%= asset_url('iphone6_mockup.png') %>");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+</style>

@@ -3,22 +3,51 @@ textarea {
 }
 
 #questions {
-  width: calc(50% - 60px);
-  height: calc(80% - 60px);
   position: absolute;
   left: 30px;
-  top: 30px;
+  top: 30px;  
+  @media only screen and (min-width: 769px) {
+    width: calc(50% - 60px);
+    height: calc(80% - 60px);
+  }
+  @media only screen and (max-width: 768px) {
+    width: calc(100% - 60px);
+    height: 200px;
+  }
 }
 
-#transformed_questions, #transformed_questions_bg {
-  width: calc(50% - 60px);
-  height: calc(100% - 60px);
+// 將結果呈現在 iphone 中
+#iphone {
+  @media only screen and (max-width: 768px) {
+    margin-top: 260px;
+    left: 30px;
+  }
+  @media only screen and (min-width: 769px) {
+    left: 50%;
+    top: 30px;
+  }
+  width: calc(600px/4562*2162);
+  height: 600px;
   position: absolute;
-  left: calc(50% + 30px);
-  top: 30px;
   // border: 2px solid black;
   text-align: center;
 }
+#transformed_questions {
+  position: absolute;
+  left: 13px;
+  top: 70px;
+  width: 258px;
+  height: 452px;
+}
+#transformed_questions::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+#transformed_questions::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+///////////////////////////////////////////
 
 #transformed_questions_bg {
   background-image: url("https://s-media-cache-ak0.pinimg.com/564x/ca/8a/59/ca8a5934413cb6c94368422f13a3ea2d.jpg");
@@ -33,16 +62,18 @@ textarea {
 
 #transformed_questions {
   overflow-y: scroll;
-  padding: 30px 0px;
+  padding: 30px 15px;
   hr {
-    margin: 30px 0px;
+    margin: 30px auto;
     width: 80%;
+    border-color: #777;
     &:last-child {
       display: none;
     }
   }
   .question_wrapper {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin: 0px auto;
     text-align: center;
     .question_content, .question_option {
