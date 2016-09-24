@@ -12,9 +12,30 @@
  *
  *= require_self
  */
+
+  $state-info-text: dodgerblue;
+  $state-success-text: lightseagreen;
+  $state-danger-text: firebrick;
+  // $state-primary-text:;
+  $state-warning-text: sienna;
+  .text-info, .text-danger, .text-success, .text-warning, .text-primary {
+    &.border {
+      padding: 7px 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 10px;
+      font-weight: bold;
+      line-height: 20px;
+    }
+  }
+
   @import "bootstrap-sprockets";
   @import "bootstrap";
-  @import "questions";
+
+  @import "mobile_detection";
+  @import "questions_transformer_layout";
+  @import "transformed_question";
+
 
   html, body, h1, h2, h3, h4, h5 {
     font-family: "微軟正黑體",'Open Sans',PingFangTC-Thin,sans-serif,Arial,Helvetica,sans-serif !important;

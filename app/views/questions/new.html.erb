@@ -1,12 +1,19 @@
-<%= text_area_tag :questions %>
-<div id="iphone">
-  <div id="transformed_questions"></div>
+<div class="clearfix text-center" style="margin-bottom: 20px; background: crimson; color: white; padding: 20px 0px 30px 0px;">
+  <h1>輕鬆建立您的購物清單</h1>
+  <h5>只需打字，不用點擊</h5>
 </div>
-
-<style type="text/css">
-  #iphone {
-    background-image: url("<%= asset_url('iphone6_mockup.png') %>");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-</style>
+<div class="container">
+  <div class="clearfix text-center">
+    <div class="col-sm-8">
+      <%= text_area_tag :questions, nil, autofocus: true %>
+    </div>
+    <div class="col-sm-4 iphone-column-wrapper">
+      <div id="iphone">
+        <div id="transformed_questions"></div>
+      </div>
+    </div>
+    <div class="col-sm-12 hidden-xs" style="cursor: pointer;">
+      <h5 class="border text-info">查看準備好的範例</h5>
+    </div>
+  </div>
+</div>

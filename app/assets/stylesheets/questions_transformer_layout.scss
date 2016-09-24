@@ -1,0 +1,74 @@
+$question_width: 333.33px;
+
+textarea {
+  font-size: 18px;
+}
+
+#questions {
+  // position: absolute;
+  // left: 30px;
+  // top: 30px;  
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+  }
+  @media only screen and (min-width: 769px) {
+    // width: calc(50% - 60px);
+    // height: calc(80% - 60px);
+    width: 100%;
+    height: 600px;
+    height: calc(#{$question_width}/1081*2281); // calc(#{$question_width}/974*1081/1081*2281);
+  }
+}
+
+.iphone-column-wrapper {
+  @media only screen and (max-width: 768px) {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+}
+
+// 將結果呈現在 iphone 中
+#iphone {
+  @media only screen and (max-width: 768px) {
+    // margin-top: 260px;
+    width: 100%;
+    background: black;
+  }
+  @media only screen and (min-width: 769px) {
+    background-image: asset-url('iphone6_mockup.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    // left: 50%;
+    // top: 30px;
+    width: $question_width; //calc(#{$question_width}/974*1081);
+    height: calc(#{$question_width}/1081*2281); // calc(#{$question_width}/974*1081/1081*2281);
+  }
+  // min-height: 568px; // iphone 5
+  // position: absolute;
+  text-align: center;
+}
+#transformed_questions {
+  @media only screen and (max-width: 768px) {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
+  @media only screen and (min-width: 769px) {
+    position: relative;
+    left: calc(#{$question_width}/1081*53); // calc(#{$question_width}/974*53);
+    top: calc(#{$question_width}/1081*267); // calc(#{$question_width}/974*267);
+    width: calc(#{$question_width}/1081*974); // $question_width;
+    height: calc(#{$question_width}/1081*1720); // calc(#{$question_width}/974*1720);
+  }
+}
+#transformed_questions::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+#transformed_questions::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
