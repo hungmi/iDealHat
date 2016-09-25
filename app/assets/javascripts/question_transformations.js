@@ -1,4 +1,4 @@
-$(document).on("input", "#questions", function(){
+$(document).on("input", "#questionsaaaaaa", function(){
   // 每次都把所有清空重新 render
   $("#transformed_questions").html("")
   // 把使用者輸入的文字每行分開變成陣列
@@ -9,13 +9,13 @@ $(document).on("input", "#questions", function(){
     if (q.length > 0){
       // 將問題包起來
       $("#transformed_questions").append("<div class='question_wrapper'></div>")
-      $wrapper = $("#transformed_questions .question_wrapper:last-child")
-      // 製造問題跟貼問題
+      var $wrapper = $("#transformed_questions .question_wrapper:last-child")
+      // 製造問題
       var $question_content = $("<div/>",{
         "class": "question_content clearfix",
         "html": "<span class='content'>" + q[0].trim() + "</span>",
       })
-      window.opt = q
+      // 問題內容放進 wrapper 中
       $wrapper.append($question_content)
 
       // 將選項包起來

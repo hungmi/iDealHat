@@ -1,10 +1,10 @@
-$(document).on("turbolinks:load", function(){
+$(document).on("ready", function(){
   if ($("i#mobile-detector").css("display") == "none"){
     window.mobile = true;
   }
 })
 
-$(document).on("turbolinks:load", function(){
+$(document).on("ready", function(){
   if (window.mobile){
     $("#iphone").css("height", $(window).height()) 
   } else {

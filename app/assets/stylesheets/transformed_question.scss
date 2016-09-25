@@ -23,7 +23,7 @@
   .question_wrapper {
     width: 100%;
     max-width: 350px;
-    margin: 0px auto;
+    margin: 0px auto 30px auto;
     text-align: center;
     .question_content, .question_option {
       background-color: rgba(248,248,248,0.78);
@@ -50,6 +50,7 @@
         vertical-align: middle;
         word-break: break-word;
         text-align: center;
+        white-space: pre-wrap;
       }
     }
     .question_option {

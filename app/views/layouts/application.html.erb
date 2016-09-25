@@ -4,12 +4,13 @@
     <title>VectorPrime</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
     <i id="mobile-detector" class="hidden-xs"></i>
     <%= yield %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.27/vue.js" %>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
