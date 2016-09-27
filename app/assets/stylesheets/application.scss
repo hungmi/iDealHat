@@ -13,7 +13,7 @@
  *= require_self
  */
   $brand-success: lightseagreen;
-  
+
   $state-info-text: dodgerblue;
   $state-success-text: lightseagreen;
   $state-danger-text: firebrick;
@@ -32,6 +32,8 @@
 
   @import "bootstrap-sprockets";
   @import "bootstrap";
+
+  @import "sweetalert2";
 
   @import "mobile_detection";
   @import "questions_transformer_layout";

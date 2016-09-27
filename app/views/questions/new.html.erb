@@ -1,9 +1,9 @@
 <div class="clearfix text-center banner">
-  <h1>收單好朋友</h1>
+  <h1 @click="alertMe(5)">收單好朋友</h1>
   <hr class="title_border_bottom">
   <h5><%= link_to "快速上手", root_path, class: "btn btn-success btn-lg" %></h5>
 </div>
-<div class="container">
+<div class="container" style="margin-bottom: 15px;">
   <div class="row text-center">
     <div class="col-sm-8 no-space">
       <textarea id="questions" v-model="questions" name="questions" autofocus="true"></textarea>
@@ -20,22 +20,22 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 hidden-xs" style="cursor: pointer;">
+    <!-- <div class="col-sm-12 hidden-xs" style="cursor: pointer;">
       <h5 class="border text-info">查看準備好的範例</h5>
-    </div>
+    </div> -->
   </div>
 </div>
 
 <template id="Qcontent">
   <div class="question_content clearfix">
-    <span class="content">{{ content }}</span>
+    <span class="content">{{ content | price_on_new_line | only_one_new_line}}</span>
   </div>
 </template>
 
 <template id="Qoption">
   <div class='col-xs-6' style='padding: 0px 5px;'>
   <div class="question_option clearfix">
-    <span class="option">{{ option }}</span>
+    <span class="option">{{ option | price_on_new_line | only_one_new_line }}</span>
   </div>
   </div>
 </template>
