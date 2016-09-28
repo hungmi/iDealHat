@@ -2,6 +2,10 @@ $(document).on("ready", function(){
   if ($("i#mobile-detector").css("display") == "none"){
     window.mobile = true;
   }
+  $(".slick").slick({
+    arrows: false,
+    dots: true
+  });
 })
 
 $(document).on("ready", function(){

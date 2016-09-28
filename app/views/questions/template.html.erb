@@ -3,19 +3,32 @@
 <i class="material-icons" id="shopping-cart" data-toggle="modal" data-target="#shoppingCartModal">shopping_cart</i>
 <div class="container" style="padding: 0px;">
   <div class="question-title">看我的口袋！熊貓打招呼</div>
-  <div class="question-images">
+  <div class="question-images slick">
     <%= image_tag "tshirt.jpg" %>
+    <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
+    <%= image_tag "tshirt_black.jpg" %>
   </div>
   <div class="question-options selectable-wrapper">
     <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
-      白/麻灰<br>
-      $499<br>
-      <%= image_tag "color.png" %>
+      <div class="question-option-padding-wrapper">
+        米白/牛仔藍<br>
+        $550
+      </div>
+      <%= image_tag "tshirt.jpg" %>
     </div>
     <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
-      麻灰/黑<br>
-      $550<br>
-      <%= image_tag "color.png" %>
+      <div class="question-option-padding-wrapper">
+        白/麻灰<br>
+        $499
+      </div>
+      <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
+    </div>
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
+      <div class="question-option-padding-wrapper">
+        麻灰/黑<br>
+        $550
+      </div>
+      <%= image_tag "tshirt_black.jpg" %>
     </div>
   </div>
   <!-- moreOptionModal -->
@@ -29,34 +42,48 @@
         <div class="modal-body question-more-options">
           <div class="selectable-wrapper">
             <div class="question-option selectable selected locked">
-              麻灰/黑<br>
-              $550<br>
-              <%= image_tag "color.png" %>
+              <div class="question-option-padding-wrapper">
+                麻灰/黑<br>
+                $550
+              </div>
+              <%= image_tag "tshirt.jpg" %>
             </div>
             <span>選擇尺寸</span>
             <div class="question-option selectable">
-              XS
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                XS
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
             <div class="question-option selectable">
-              S
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                S
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
             <div class="question-option selectable">
-              M
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                M
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
             <div class="question-option selectable">
-              L
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                L
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
             <div class="question-option selectable">
-              XL
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                XL
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
             <div class="question-option selectable">
-              XXL
-              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              <div class="question-option-padding-wrapper">
+                XXL
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
             </div>
           </div>
         </div>
@@ -77,26 +104,53 @@
           <h4 class="modal-title" id="shoppingCartModalLabel">我的購物車</h4>
         </div>
         <div class="modal-body question-more-options">
-          <div class="selectable-wrapper">
-            <span>看我的口袋！熊貓打招呼</span>
-            <div class="question-option selectable selected locked">
-              麻灰/黑<br>
-              $550<br>
-              <%= image_tag "color.png" %>
+          <div class="order-item">
+            <div class="selectable-wrapper">
+              <h5>看我的口袋！熊貓打招呼</h5>
+              <div class="question-option selectable selected locked">
+                <div class="question-option-padding-wrapper">
+                  麻灰/黑<br>
+                  $550<br>
+                  <%= image_tag "color.png" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="question-option-padding-wrapper">
+                  M
+                  <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="question-option-padding-wrapper">
+                  S
+                  <br><%= select_tag :quantity, options_for_select(1..9, 5), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
             </div>
-            <div class="question-option selectable selected">
-              M
-              <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
-            </div>
-            <div class="question-option selectable selected">
-              S
-              <br><%= select_tag :quantity, options_for_select(1..9, 5), include_blank: "請選擇數量", class: "form-control" %>
+          </div>
+          <hr style="margin: 20px auto; border: 1px solid #eee; width: 50%;">
+          <div class="order-item">
+            <div class="selectable-wrapper">
+              <h5>看我的口袋！熊貓打招呼</h5>
+              <div class="question-option selectable selected locked">
+                <div class="question-option-padding-wrapper">
+                  麻灰/黑<br>
+                  $550<br>
+                  <%= image_tag "color.png" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="question-option-padding-wrapper">
+                  XL
+                  <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-          <button type="button" class="btn btn-success">前往結帳</button>
+          <button type="button" class="btn btn-primary btn-checkout">前往結帳</button>
         </div>
       </div>
     </div>
@@ -105,3 +159,13 @@
   <hr style="margin: 40px auto; border: 1px solid #eee; width: 50%;">
 
 </div>
+
+<template> <!-- the item selected from first level select -->
+  <div class="question-option selectable selected locked">
+    <div class="question-option-padding-wrapper">
+      麻灰/黑<br>
+      $550
+    </div>
+    <%= image_tag "tshirt.jpg" %>
+  </div>
+</template>

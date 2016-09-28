@@ -19,19 +19,29 @@
     font-size: 16px;
     width: 200px;
     margin: 15px auto;
-    padding: 15px;
+    padding: 15px 0px;
     background-color: #F6F6F6;
     border: 1px solid #D0CECE;
     cursor: pointer;
     // &:hover {
     //   border-color: #4A90E2;
     // }
+    .question-option-padding-wrapper { // 沒有把要 padding 跟不要的區隔開的話，圖片會無法滿版顯示，而且尺寸小於 question-option 的圖片會偏左
+      padding: 0px 15px;
+    }
     &.first-child {
       margin-top: 0px;
     }
     img {
-      border: 1px solid #979797;
-      margin: 10px auto 0px auto;
+      // border: 1px solid #979797;
+      // margin-left: -15px;
+      // margin-right: -15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      // max-width: calc(100% + 30px);
+      max-width: 100%;
+      display: block;
     }
     .form-control {
       margin: 10px auto;
@@ -117,10 +127,6 @@ button.close {
   }
 }
 
-.btn-add-to-cart {
-  background: dodgerblue;
-}
-
 #shopping-cart {
   position: fixed;
   left: -15px;
@@ -139,12 +145,12 @@ button.close {
 }
 
 #order-counter {
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   background: dodgerblue;
-  padding: 3px 2px 4px 0px;
-  border-radius: 99px;
-  width: 30px;
+  padding: 3px 3px 4px 0px;
+  border-radius: 50%;
+  width: 32px;
   position: fixed;
   bottom: 50px;
   z-index: 1;

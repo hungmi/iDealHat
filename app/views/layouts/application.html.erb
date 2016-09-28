@@ -4,8 +4,10 @@
     <title>VectorPrime</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css", media: "all" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css", media: "all" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons", media: "all" %>
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
@@ -13,5 +15,6 @@
     <%= yield %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.27/vue.js" %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" %>
   </body>
 </html>
