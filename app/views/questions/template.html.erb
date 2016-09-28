@@ -1,28 +1,30 @@
 <!-- <div id="mask"></div> -->
+<i id="order-counter">1</i>
+<i class="material-icons" id="shopping-cart" data-toggle="modal" data-target="#shoppingCartModal">shopping_cart</i>
 <div class="container" style="padding: 0px;">
   <div class="question-title">看我的口袋！熊貓打招呼</div>
   <div class="question-images">
     <%= image_tag "tshirt.jpg" %>
   </div>
   <div class="question-options selectable-wrapper">
-    <div class="question-option selectable" data-toggle="modal" data-target="#myModal">
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
       白/麻灰<br>
       $499<br>
       <%= image_tag "color.png" %>
     </div>
-    <div class="question-option selectable" data-toggle="modal" data-target="#myModal">
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
       麻灰/黑<br>
       $550<br>
       <%= image_tag "color.png" %>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- moreOptionModal -->
+  <div class="modal fade" id="moreOptionModal" tabindex="-1" role="dialog" aria-labelledby="moreOptionModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-question-more-options"></span></button>
-          <h4 class="modal-title" id="myModalLabel">看我的口袋！熊貓打招呼</h4>
+          <h4 class="modal-title" id="moreOptionModalLabel">看我的口袋！熊貓打招呼</h4>
         </div>
         <div class="modal-body question-more-options">
           <div class="selectable-wrapper">
@@ -61,6 +63,40 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           <button type="button" class="btn btn-primary btn-add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- shoppingCartModal -->
+  <div class="modal fade" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-question-more-options"></span></button>
+          <h4 class="modal-title" id="shoppingCartModalLabel">我的購物車</h4>
+        </div>
+        <div class="modal-body question-more-options">
+          <div class="selectable-wrapper">
+            <span>看我的口袋！熊貓打招呼</span>
+            <div class="question-option selectable selected locked">
+              麻灰/黑<br>
+              $550<br>
+              <%= image_tag "color.png" %>
+            </div>
+            <div class="question-option selectable selected">
+              M
+              <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable selected">
+              S
+              <br><%= select_tag :quantity, options_for_select(1..9, 5), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          <button type="button" class="btn btn-success">前往結帳</button>
         </div>
       </div>
     </div>

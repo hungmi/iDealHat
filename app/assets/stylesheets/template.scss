@@ -120,3 +120,34 @@ button.close {
 .btn-add-to-cart {
   background: dodgerblue;
 }
+
+#shopping-cart {
+  position: fixed;
+  left: -15px;
+  bottom: 20px;
+  width: 60px;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  background: white;
+  // color: white;
+  // background: dodgerblue;
+  text-align: right;
+  padding: 7px 12px;
+  border-radius: 18px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#order-counter {
+  border: 1px solid white;
+  color: white;
+  background: dodgerblue;
+  padding: 3px 2px 4px 0px;
+  border-radius: 99px;
+  width: 30px;
+  position: fixed;
+  bottom: 50px;
+  z-index: 1;
+  left: 24px;
+  text-align: center;
+}
