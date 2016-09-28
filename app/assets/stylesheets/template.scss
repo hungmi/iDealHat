@@ -142,6 +142,7 @@ button.close {
   border-radius: 18px;
   font-size: 28px;
   cursor: pointer;
+  z-index: 1
 }
 
 #order-counter {
@@ -153,7 +154,7 @@ button.close {
   width: 32px;
   position: fixed;
   bottom: 50px;
-  z-index: 1;
+  z-index: 2;
   left: 24px;
   text-align: center;
 }
