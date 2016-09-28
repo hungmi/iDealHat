@@ -1,0 +1,71 @@
+<!-- <div id="mask"></div> -->
+<div class="container" style="padding: 0px;">
+  <div class="question-title">看我的口袋！熊貓打招呼</div>
+  <div class="question-images">
+    <%= image_tag "tshirt.jpg" %>
+  </div>
+  <div class="question-options selectable-wrapper">
+    <div class="question-option selectable" data-toggle="modal" data-target="#myModal">
+      白/麻灰<br>
+      $499<br>
+      <%= image_tag "color.png" %>
+    </div>
+    <div class="question-option selectable" data-toggle="modal" data-target="#myModal">
+      麻灰/黑<br>
+      $550<br>
+      <%= image_tag "color.png" %>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-question-more-options"></span></button>
+          <h4 class="modal-title" id="myModalLabel">看我的口袋！熊貓打招呼</h4>
+        </div>
+        <div class="modal-body question-more-options">
+          <div class="selectable-wrapper">
+            <div class="question-option selectable selected locked">
+              麻灰/黑<br>
+              $550<br>
+              <%= image_tag "color.png" %>
+            </div>
+            <span>選擇尺寸</span>
+            <div class="question-option selectable">
+              XS
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable">
+              S
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable">
+              M
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable">
+              L
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable">
+              XL
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+            <div class="question-option selectable">
+              XXL
+              <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn-add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin: 40px auto; border: 1px solid #eee; width: 50%;">
+
+</div>

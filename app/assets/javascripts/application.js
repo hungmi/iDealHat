@@ -6,6 +6,11 @@
 //
 //= require jquery
 //= require sweetalert2
+//= require fastclick.min
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require_tree .
+//= require cable
+//= require init
+//= require Q_vue
+//= require question_actions
+//= require buying_process

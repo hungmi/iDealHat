@@ -1,6 +1,10 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :update, :destroy]
 
+  def template
+    
+  end
+
   # GET /questions
   # GET /questions.json
   def index
