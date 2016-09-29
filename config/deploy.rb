@@ -1,7 +1,7 @@
 lock '3.6.0'
 
-set :application, 'vector_prime'
-set :repo_url, 'git@github.com:hungmi/vector_prime.git' # Edit this to match your repository
+set :application, 'idealhat'
+set :repo_url, 'git@github.com:hungmi/idealhat.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/railsapp'
 set :pty, true
