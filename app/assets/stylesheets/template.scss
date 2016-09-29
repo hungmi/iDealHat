@@ -1,11 +1,12 @@
-.questions .container {
+.questions.template .container {
   max-width: 500px;
 }
 
 .question-title {
   text-align: center;
-  line-height: 60px;
+  line-height: 32px;
   font-size: 24px;
+  margin: 10px auto;
 }
 .question-images {
   img {
@@ -26,9 +27,6 @@
     // &:hover {
     //   border-color: #4A90E2;
     // }
-    .question-option-padding-wrapper { // 沒有把要 padding 跟不要的區隔開的話，圖片會無法滿版顯示，而且尺寸小於 question-option 的圖片會偏左
-      padding: 0px 15px;
-    }
     &.first-child {
       margin-top: 0px;
     }
@@ -157,4 +155,9 @@ button.close {
   z-index: 2;
   left: 24px;
   text-align: center;
+}
+
+.padding-wrapper { // 沒有把要 padding 跟不要的區隔開的話，圖片會無法滿版顯示，而且尺寸小於 question-option 的圖片會偏左
+  padding-left: 15px;
+  padding-right: 15px;
 }

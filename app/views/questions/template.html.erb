@@ -1,36 +1,23 @@
-<!-- <div id="mask"></div> -->
-<i id="order-counter">1</i>
-<i class="material-icons" id="shopping-cart" data-toggle="modal" data-target="#shoppingCartModal">shopping_cart</i>
 <div class="container" style="padding: 0px;">
-  <div class="question-title">看我的口袋！熊貓打招呼</div>
+  <div class="question-title">
+    <div class="padding-wrapper">
+      H10-韓國限定版<br>米奇皓石<br>玻璃球髮圈<br>
+      $35
+      </div>
+    </div>
   <div class="question-images slick">
-    <%= image_tag "tshirt.jpg" %>
-    <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
-    <%= image_tag "IMG_0105.jpg" %>
+    <%= image_tag "fb_ex1.jpg" %>
   </div>
-  <div class="question-options selectable-wrapper">
-    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
-      <div class="question-option-padding-wrapper">
-        米白/牛仔藍<br>
-        $550
+  <% ["黑色","玫紅","寶藍","紫色","白色","湖藍","粉色","彩色"].each do |co| %>
+    <div class="question-options selectable-wrapper">
+      <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
+        <div class="padding-wrapper">
+          <%= co %><br>
+          $35
+        </div>
       </div>
-      <%= image_tag "tshirt.jpg" %>
     </div>
-    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
-      <div class="question-option-padding-wrapper">
-        白/麻灰<br>
-        $499
-      </div>
-      <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
-    </div>
-    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
-      <div class="question-option-padding-wrapper">
-        麻灰/黑<br>
-        $550
-      </div>
-      <%= image_tag "IMG_0105.jpg" %>
-    </div>
-  </div>
+  <% end %>
   <!-- moreOptionModal -->
   <div class="modal fade" id="moreOptionModal" tabindex="-1" role="dialog" aria-labelledby="moreOptionModalLabel">
     <div class="modal-dialog" role="document">
@@ -42,7 +29,7 @@
         <div class="modal-body question-more-options">
           <div class="selectable-wrapper">
             <div class="question-option selectable selected locked">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 麻灰/黑<br>
                 $550
               </div>
@@ -50,37 +37,37 @@
             </div>
             <span>選擇尺寸</span>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 XS
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
             </div>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 S
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
             </div>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 M
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
             </div>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 L
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
             </div>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 XL
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
             </div>
             <div class="question-option selectable">
-              <div class="question-option-padding-wrapper">
+              <div class="padding-wrapper">
                 XXL
                 <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
               </div>
@@ -108,20 +95,20 @@
             <div class="selectable-wrapper">
               <h5>看我的口袋！熊貓打招呼</h5>
               <div class="question-option selectable selected locked">
-                <div class="question-option-padding-wrapper">
+                <div class="padding-wrapper">
                   麻灰/黑<br>
                   $550<br>
                   <%= image_tag "color.png" %>
                 </div>
               </div>
               <div class="question-option selectable selected">
-                <div class="question-option-padding-wrapper">
+                <div class="padding-wrapper">
                   M
                   <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
                 </div>
               </div>
               <div class="question-option selectable selected">
-                <div class="question-option-padding-wrapper">
+                <div class="padding-wrapper">
                   S
                   <br><%= select_tag :quantity, options_for_select(1..9, 5), include_blank: "請選擇數量", class: "form-control" %>
                 </div>
@@ -133,14 +120,176 @@
             <div class="selectable-wrapper">
               <h5>看我的口袋！熊貓打招呼</h5>
               <div class="question-option selectable selected locked">
-                <div class="question-option-padding-wrapper">
+                <div class="padding-wrapper">
                   麻灰/黑<br>
                   $550<br>
                   <%= image_tag "color.png" %>
                 </div>
               </div>
               <div class="question-option selectable selected">
-                <div class="question-option-padding-wrapper">
+                <div class="padding-wrapper">
+                  XL
+                  <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          <button type="button" class="btn btn-primary btn-checkout">前往結帳</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin: 40px auto; border: 1px solid #eee; width: 50%;">
+
+</div>
+
+<!-- <div id="mask"></div> -->
+<i id="order-counter">1</i>
+<i class="material-icons" id="shopping-cart" data-toggle="modal" data-target="#shoppingCartModal">shopping_cart</i>
+<div class="container" style="padding: 0px;">
+  <div class="question-title">看我的口袋！熊貓打招呼</div>
+  <div class="question-images slick">
+    <%= image_tag "tshirt.jpg" %>
+    <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
+    <%= image_tag "IMG_0105.jpg" %>
+  </div>
+  <div class="question-options selectable-wrapper">
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
+      <div class="padding-wrapper">
+        米白/牛仔藍<br>
+        $550
+      </div>
+      <%= image_tag "tshirt.jpg" %>
+    </div>
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
+      <div class="padding-wrapper">
+        白/麻灰<br>
+        $499
+      </div>
+      <%= image_tag "https://gd1.alicdn.com/bao/uploaded/i1/826718035/TB2N425sFXXXXc5XpXXXXXXXXXX_!!826718035.jpg_600x600.jpg" %>
+    </div>
+    <div class="question-option selectable" data-toggle="modal" data-target="#moreOptionModal">
+      <div class="padding-wrapper">
+        麻灰/黑<br>
+        $550
+      </div>
+      <%= image_tag "IMG_0105.jpg" %>
+    </div>
+  </div>
+  <!-- moreOptionModal -->
+  <div class="modal fade" id="moreOptionModal" tabindex="-1" role="dialog" aria-labelledby="moreOptionModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-question-more-options"></span></button>
+          <h4 class="modal-title" id="moreOptionModalLabel">看我的口袋！熊貓打招呼</h4>
+        </div>
+        <div class="modal-body question-more-options">
+          <div class="selectable-wrapper">
+            <div class="question-option selectable selected locked">
+              <div class="padding-wrapper">
+                麻灰/黑<br>
+                $550
+              </div>
+              <%= image_tag "tshirt.jpg" %>
+            </div>
+            <span>選擇尺寸</span>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                XS
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                S
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                M
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                L
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                XL
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+            <div class="question-option selectable">
+              <div class="padding-wrapper">
+                XXL
+                <br><%= select_tag :quantity, options_for_select(1..9), include_blank: "請選擇數量", class: "form-control" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn-add-to-cart">加入購物車</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- shoppingCartModal -->
+  <div class="modal fade" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="close-question-more-options"></span></button>
+          <h4 class="modal-title" id="shoppingCartModalLabel">我的購物車</h4>
+        </div>
+        <div class="modal-body question-more-options">
+          <div class="order-item">
+            <div class="selectable-wrapper">
+              <h5>看我的口袋！熊貓打招呼</h5>
+              <div class="question-option selectable selected locked">
+                <div class="padding-wrapper">
+                  麻灰/黑<br>
+                  $550<br>
+                  <%= image_tag "color.png" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="padding-wrapper">
+                  M
+                  <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="padding-wrapper">
+                  S
+                  <br><%= select_tag :quantity, options_for_select(1..9, 5), include_blank: "請選擇數量", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="margin: 20px auto; border: 1px solid #eee; width: 50%;">
+          <div class="order-item">
+            <div class="selectable-wrapper">
+              <h5>看我的口袋！熊貓打招呼</h5>
+              <div class="question-option selectable selected locked">
+                <div class="padding-wrapper">
+                  麻灰/黑<br>
+                  $550<br>
+                  <%= image_tag "color.png" %>
+                </div>
+              </div>
+              <div class="question-option selectable selected">
+                <div class="padding-wrapper">
                   XL
                   <br><%= select_tag :quantity, options_for_select(1..9, 3), include_blank: "請選擇數量", class: "form-control" %>
                 </div>
@@ -162,7 +311,7 @@
 
 <template> <!-- the item selected from first level select -->
   <div class="question-option selectable selected locked">
-    <div class="question-option-padding-wrapper">
+    <div class="padding-wrapper">
       麻灰/黑<br>
       $550
     </div>

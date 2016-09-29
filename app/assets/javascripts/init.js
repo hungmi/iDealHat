@@ -4,7 +4,8 @@ $(document).on("ready", function(){
   }
   $(".slick").slick({
     arrows: false,
-    dots: true
+    dots: true,
+    adaptiveHeight: true
   });
 })
 
